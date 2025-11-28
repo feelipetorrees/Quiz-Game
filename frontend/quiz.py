@@ -75,7 +75,7 @@ class QuizClient:
         try:
             # Conectar ao WebSocket
             self.ws = websocket.WebSocketApp(
-                f"ws://localhost:8000/ws/quiz/{self.quiz_code}/",
+                f"ws://192.168.1.101:8000/ws/quiz/{self.quiz_code}/",
                 on_open=self.on_ws_open,
                 on_message=self.on_ws_message,
                 on_error=self.on_ws_error,
